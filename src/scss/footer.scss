@@ -1,0 +1,18 @@
+//====================================================================================================
+.footer {
+	background: #0d1428;
+	@include adaptiveValue("padding-top", 40, 15);
+	@include adaptiveValue("padding-bottom", 40, 15);
+	// .footer__container
+	&__container {
+	}
+	// .footer__copyright
+	&__copyright {
+		text-align: center;
+		line-height: math.div(24, 20);
+		font-size: rem(20);
+		opacity: 0.4;
+	}
+}
+
+//====================================================================================================

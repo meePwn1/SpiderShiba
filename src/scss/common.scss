@@ -1,0 +1,53 @@
+// Заголовки, общие БЄМ блоки и проче...
+._btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.swiper-wrapper {
+	-webkit-transition-timing-function: linear !important;
+	transition-timing-function: linear !important;
+}
+
+._title {
+	font-weight: 700;
+	@include adaptiveValue("font-size", 50, 40);
+	line-height: math.div(60, 50);
+	text-align: center;
+}
+
+.swiper-pagination-bullet {
+	flex: 0 0 10px;
+	height: 10px;
+	background: #a2a7b4;
+	&-active {
+		background-color: $redColor;
+	}
+}
+
+._icon-arrow-down {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: left;
+	flex-direction: row-reverse;
+	column-gap: 20px;
+	&::before {
+		flex: 0 0 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $redColor;
+		border-radius: 50%;
+		color: #fff;
+		font-size: rem(12);
+	}
+	@media (max-width: $mobile) {
+		&::before {
+			flex: 0 0 30px;
+			height: 30px;
+		}
+	}
+}
